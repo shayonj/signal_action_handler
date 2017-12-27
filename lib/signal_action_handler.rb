@@ -1,0 +1,1 @@
+require "signal_action_handler/signal_action_handler"

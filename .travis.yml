@@ -1,11 +1,19 @@
 sudo: false
 language: ruby
+os:
+  - linux
+  - osx
 rvm:
-  - 1.9.3
-  - 2.0.0
+  - 2.1.5
   - 2.2.8
-  - 2.3.1
   - 2.3.5
   - 2.4.2
+  - 2.3.4-clang
+  - 2.5.0
 before_install:
   - gem install bundler -v 1.16.1
+install:
+  - bundle install
+  - rake install
+script:
+  - bundle exec rspec

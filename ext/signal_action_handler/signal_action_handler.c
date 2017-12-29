@@ -175,13 +175,9 @@ VALUE method_info(VALUE self)
     {
       handler = "IGNORE";
     }
-    else if (oldact.sa_handler == SIG_DFL)
+    else if (oldact.sa_handler == SIG_ERR)
     {
-      handler = "SYSTEM_DEFAULT";
-    }
-    else if (oldact.sa_handler == SIG_DFL)
-    {
-      handler = "SYSTEM_DEFAULT";
+      handler = "ERROR";
     }
     else
     {

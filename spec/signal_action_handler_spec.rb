@@ -20,7 +20,7 @@ RSpec.describe SignalActionHandler do
     end
 
     it "has the same signals as the default Signals.list" do
-      expect(SignalActionHandler.info.keys).to eq(Signal.list.keys)
+      expect(SignalActionHandler.info.keys).to eq(Signal.list.keys - SignalActionHandler::RESERVED_SIGNALS)
     end
   end
 end

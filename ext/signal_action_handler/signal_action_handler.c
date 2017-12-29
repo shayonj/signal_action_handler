@@ -14,9 +14,6 @@ static const struct signals {
 #ifdef SIGQUIT
   {"QUIT", SIGQUIT},
 #endif
-#ifdef SIGILL
-  {"ILL", SIGILL},
-#endif
 #ifdef SIGTRAP
   {"TRAP", SIGTRAP},
 #endif
@@ -29,17 +26,8 @@ static const struct signals {
 #ifdef SIGEMT
   {"EMT", SIGEMT},
 #endif
-#ifdef SIGFPE
-  {"FPE", SIGFPE},
-#endif
 #ifdef SIGKILL
   {"KILL", SIGKILL},
-#endif
-#ifdef SIGBUS
-  {"BUS", SIGBUS},
-#endif
-#ifdef SIGSEGV
-  {"SEGV", SIGSEGV},
 #endif
 #ifdef SIGSYS
   {"SYS", SIGSYS},
@@ -89,9 +77,6 @@ static const struct signals {
 #endif
 #ifdef SIGXFSZ
   {"XFSZ", SIGXFSZ},
-#endif
-#ifdef SIGVTALRM
-  {"VTALRM", SIGVTALRM},
 #endif
 #ifdef SIGPROF
   {"PROF", SIGPROF},
